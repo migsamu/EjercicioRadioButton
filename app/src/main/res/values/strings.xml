@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Encuesta</string>
+    <string name="tvTitutloEncuesta">Encuesta sobre sistemas operativos</string>
+    <string name="tvEncuesta">Vota por el mejor sistema</string>
+    <string name="rbWin">Windows</string>
+    <string name="rbLinux">Linux</string>
+    <string name="rbIos">IOS</string>
+    <string name="rbAndroid">Android</string>
+    <string name="ibvotar">Votar</string>
+</resources>

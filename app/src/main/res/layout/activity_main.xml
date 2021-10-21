@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTituloEncuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/tvTitutloEncuesta"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEnunciado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/tvEncuesta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloEncuesta" />
+
+    <RadioGroup
+        android:id="@+id/rgSistemasOperativos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnunciado" >
+
+        <RadioButton
+            android:id="@+id/rbWin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbWin" />
+
+        <RadioButton
+            android:id="@+id/rbAndroid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbAndroid" />
+
+        <RadioButton
+            android:id="@+id/rbLinux"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbLinux" />
+
+        <RadioButton
+            android:id="@+id/rbIos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbIos" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/ivWin"
+        android:layout_width="57dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/rbWin"
+        app:layout_constraintStart_toEndOf="@+id/rgSistemasOperativos"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnunciado"
+        app:srcCompat="@drawable/win"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/ivAndroid"
+        android:layout_width="58dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/rbAndroid"
+        app:layout_constraintStart_toEndOf="@+id/rgSistemasOperativos"
+        app:layout_constraintTop_toBottomOf="@+id/ivWin"
+        app:srcCompat="@drawable/android"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/ivLinux"
+        android:layout_width="58dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/rbLinux"
+        app:layout_constraintStart_toEndOf="@+id/rgSistemasOperativos"
+        app:layout_constraintTop_toBottomOf="@+id/ivAndroid"
+        app:srcCompat="@drawable/linux" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="57dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/rbIos"
+        app:layout_constraintStart_toEndOf="@+id/rgSistemasOperativos"
+        app:layout_constraintTop_toBottomOf="@+id/ivLinux"
+        app:srcCompat="@drawable/ios"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/ibVotar"
+        android:layout_width="131dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/ibvotar"
+        android:onClick="votar"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgSistemasOperativos"
+        app:srcCompat="@drawable/votar" />
+
+    <TextView
+        android:id="@+id/tvVotacion"
+        android:layout_width="371dp"
+        android:layout_height="269dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibVotar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
